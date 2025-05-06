@@ -1,1 +1,139 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PuffStop – Quit Smoking & Vaping</title>
+  <meta name="description" content="PuffStop helps you quit smoking and vaping with personalized goals, tracking, and community support. Download on the App Store."/>
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* Base Styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* Layout */
+    header, section, footer { padding: 60px 20px; }
+    .container { max-width: 960px; margin: 0 auto; }
+
+    /* Hero */
+    .hero { text-align: center; background: #f5f9ff; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
+    .hero p { font-size: 1.125rem; margin-bottom: 30px; color: #555; }
+    .btn-appstore {
+      display: inline-block;
+      background: #0070c9;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: background 0.2s ease;
+    }
+    .btn-appstore:hover { background: #005fa3; }
+
+    /* Features */
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+    .feature { text-align: center; padding: 20px; }
+    .feature img { width: 80px; margin-bottom: 20px; }
+    .feature h3 { font-size: 1.25rem; margin-bottom: 10px; }
+
+    /* Screenshots */
+    .screenshots { text-align: center; }
+    .screenshots img { max-width: 240px; margin: 10px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+    /* Footer */
+    footer { background: #222; color: #fff; text-align: center; }
+    footer p { margin-bottom: 10px; }
+    footer a { color: #64b5f6; }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      header, section, footer { padding: 40px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <h1>PuffStop</h1>
+      <p>Your personal companion to quit smoking and vaping—for good.</p>
+      <a href="https://apps.apple.com/app/idYOUR_APP_ID" class="btn-appstore">
+        Download on the App Store
+      </a>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section>
+    <div class="container">
+      <h2 style="text-align:center; margin-bottom:40px;">Why PuffStop?</h2>
+      <div class="features">
+        <div class="feature">
+          <img src="icons/goal.svg" alt="Set Goals"/>
+          <h3>Personalized Goals</h3>
+          <p>Choose your quitting pace and targets, tailored just for you.</p>
+        </div>
+        <div class="feature">
+          <img src="icons/tracker.svg" alt="Track Progress"/>
+          <h3>Progress Tracker</h3>
+          <p>Monitor days smoke-free, money saved, and health improvements.</p>
+        </div>
+        <div class="feature">
+          <img src="icons/community.svg" alt="Community Support"/>
+          <h3>Community Support</h3>
+          <p>Join a supportive network and share milestones with friends.</p>
+        </div>
+        <div class="feature">
+          <img src="icons/resources.svg" alt="Resources"/>
+          <h3>Expert Resources</h3>
+          <p>Access tips, articles, and professional guidance anytime.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots Section -->
+  <section class="screenshots">
+    <div class="container">
+      <h2>App Screenshots</h2>
+      <div>
+        <img src="screenshots/01.png" alt="PuffStop Screenshot 1"/>
+        <img src="screenshots/02.png" alt="PuffStop Screenshot 2"/>
+        <img src="screenshots/03.png" alt="PuffStop Screenshot 3"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="hero">
+    <div class="container">
+      <h2>Ready to take the first step?</h2>
+      <a href="https://apps.apple.com/app/idYOUR_APP_ID" class="btn-appstore">
+        Get PuffStop Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 PuffStop Inc. All rights reserved.</p>
+      <p>
+        <a href="#privacy">Privacy Policy</a> | 
+        <a href="#terms">Terms of Service</a> | 
+        <a href="mailto:support@puffstopapp.com">Contact Support</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
