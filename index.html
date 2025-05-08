@@ -1,139 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PuffStop – Quit Smoking & Vaping</title>
-  <meta name="description" content="PuffStop helps you quit smoking and vaping with personalized goals, tracking, and community support. Download on the App Store."/>
-  <link rel="icon" href="favicon.ico" />
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PuffStop — Quit Smoking & Vaping with Daily Tracking & Personalized Plans</title>
+  <meta name="description" content="PuffStop helps you quit smoking and vaping by tracking daily puffs, offering weekly and monthly insights, and guiding you with personalized quit plans. Start your smoke-free journey today!">
+  <meta property="og:title" content="PuffStop — Quit Smoking & Vaping" />
+  <meta property="og:description" content="Track every puff, view nicotine trends, and follow a personalized quit plan. Download PuffStop on the App Store." />
+  <meta property="og:image" content="hero-bg.jpg" />
+  <link rel="canonical" href="https://yourdomain.com" />
   <style>
-    /* Base Styles */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; height: auto; display: block; }
-
-    /* Layout */
-    header, section, footer { padding: 60px 20px; }
-    .container { max-width: 960px; margin: 0 auto; }
-
-    /* Hero */
-    .hero { text-align: center; background: #f5f9ff; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 20px; }
-    .hero p { font-size: 1.125rem; margin-bottom: 30px; color: #555; }
-    .btn-appstore {
-      display: inline-block;
-      background: #0070c9;
-      color: #fff;
-      padding: 14px 28px;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: 700;
-      transition: background 0.2s ease;
+    :root {
+      --calm-green: #A8D5BA;
+      --dark-green: #6B8E72;
+      --white: #ffffff;
+      --gray-light: #f5f5f5;
+      --header-height: 80px;
     }
-    .btn-appstore:hover { background: #005fa3; }
-
-    /* Features */
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-    .feature { text-align: center; padding: 20px; }
-    .feature img { width: 80px; margin-bottom: 20px; }
-    .feature h3 { font-size: 1.25rem; margin-bottom: 10px; }
-
-    /* Screenshots */
-    .screenshots { text-align: center; }
-    .screenshots img { max-width: 240px; margin: 10px; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-
-    /* Footer */
-    footer { background: #222; color: #fff; text-align: center; }
-    footer p { margin-bottom: 10px; }
-    footer a { color: #64b5f6; }
-
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 2rem; }
-      header, section, footer { padding: 40px 15px; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { display: flex; flex-direction: column; min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6; color: var(--dark-green); background-color: var(--gray-light);
+    }
+    a { text-decoration: none; }
+    header.site-header {
+      height: var(--header-height); display: flex; align-items: center;
+      padding: 0 1rem; background: var(--white); box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .logo-container { display: flex; align-items: center; }
+    .site-logo { max-width: 60px; height: auto; border-radius: 12px; }
+    .site-title { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 1.5rem; color: var(--dark-green); margin-left: 0.75rem;
+    }
+    main { flex: 1; }
+    .hero {
+      position: relative; background: url('hero-bg.jpg') center/cover no-repeat;
+      color: var(--white); text-align: center; min-height: 90vh;
+      display: flex; justify-content: center; align-items: center; padding: 1rem;
+    }
+    .hero::before {
+      content: ""; position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); z-index: 0;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 700px; }
+    .hero-content h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero-content p { font-size: 1.125rem; margin-bottom: 1.5rem; }
+    .benefits { list-style: none; margin-bottom: 2rem; }
+    .benefits li { margin: 0.5rem 0; }
+    .btn { display: inline-block; background-color: var(--calm-green);
+      color: var(--white); padding: 0.75rem 1.5rem; border-radius: 999px;
+      font-size: 1rem; font-weight: 600; transition: background-color 0.3s ease;
+    }
+    .btn:hover { background-color: var(--dark-green); }
+    .appstore-badge { max-width: 200px; height: auto; }
+    .features { width: 90%; max-width: 1000px; margin: 3rem auto; }
+    .feature { display: flex; flex-direction: column; align-items: center;
+      background: var(--white); padding: 2rem; border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 2rem;
+    }
+    .feature h2 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--dark-green); }
+    .feature p { max-width: 800px; margin-bottom: 1.5rem; }
+    .feature img { max-width: 300px; width: 100%; height: auto;
+      border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    footer { text-align: center; padding: 2rem 0; font-size: 0.875rem;
+      color: #777; margin-top: auto;
+    }
+    @media (min-width: 768px) {
+      .hero-content h1 { font-size: 3rem; }
+      .hero-content p { font-size: 1.25rem; }
+      .feature { flex-direction: row; justify-content: space-between; }
+      .feature-content { flex: 1; padding-right: 1.5rem; }
+      .feature img { flex: 1; max-width: 350px; }
     }
   </style>
 </head>
 <body>
-
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container">
-      <h1>PuffStop</h1>
-      <p>Your personal companion to quit smoking and vaping—for good.</p>
-      <a href="https://apps.apple.com/app/idYOUR_APP_ID" class="btn-appstore">
-        Download on the App Store
-      </a>
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="logo.png" alt="PuffStop Logo" class="site-logo">
+      <span class="site-title">PuffStop</span>
     </div>
   </header>
-
-  <!-- Features Section -->
-  <section>
-    <div class="container">
-      <h2 style="text-align:center; margin-bottom:40px;">Why PuffStop?</h2>
-      <div class="features">
-        <div class="feature">
-          <img src="icons/goal.svg" alt="Set Goals"/>
-          <h3>Personalized Goals</h3>
-          <p>Choose your quitting pace and targets, tailored just for you.</p>
-        </div>
-        <div class="feature">
-          <img src="icons/tracker.svg" alt="Track Progress"/>
-          <h3>Progress Tracker</h3>
-          <p>Monitor days smoke-free, money saved, and health improvements.</p>
-        </div>
-        <div class="feature">
-          <img src="icons/community.svg" alt="Community Support"/>
-          <h3>Community Support</h3>
-          <p>Join a supportive network and share milestones with friends.</p>
-        </div>
-        <div class="feature">
-          <img src="icons/resources.svg" alt="Resources"/>
-          <h3>Expert Resources</h3>
-          <p>Access tips, articles, and professional guidance anytime.</p>
-        </div>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Quit Smoking & Vaping for Good</h1>
+        <p>Take control of your habits with PuffStop's powerful tools and stay motivated every step of the way.</p>
+        <ul class="benefits">
+          <li>🔍 Track your daily puffs visually</li>
+          <li>📊 Analyze weekly & monthly trends</li>
+          <li>🛠 Follow a personalized quit plan</li>
+        </ul>
+        <a href="https://apps.apple.com/app/idYOUR_APP_ID" class="btn" aria-label="Download PuffStop on the App Store">
+          <img src="app-store-badge.svg" alt="Download on the App Store" class="appstore-badge">
+        </a>
       </div>
-    </div>
-  </section>
-
-  <!-- Screenshots Section -->
-  <section class="screenshots">
-    <div class="container">
-      <h2>App Screenshots</h2>
-      <div>
-        <img src="screenshots/01.png" alt="PuffStop Screenshot 1"/>
-        <img src="screenshots/02.png" alt="PuffStop Screenshot 2"/>
-        <img src="screenshots/03.png" alt="PuffStop Screenshot 3"/>
+    </section>
+    <section class="features" aria-labelledby="feature-heading">
+      <h2 id="feature-heading" class="visually-hidden">App Features</h2>
+      <div class="feature">
+        <h2>Daily Puff Tracker</h2>
+        <p>Visualize your smoking or vaping habits throughout the day with our unique clock interface. Each hour segment displays the exact number of puffs, helping you identify peak times and make informed decisions to curb cravings.</p>
+        <img src="iphone-dayview.png" alt="iPhone showing Daily Puff Tracker interface">
       </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="hero">
-    <div class="container">
-      <h2>Ready to take the first step?</h2>
-      <a href="https://apps.apple.com/app/idYOUR_APP_ID" class="btn-appstore">
-        Get PuffStop Now
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
+      <div class="feature">
+        <h2>Weekly & Monthly Insights</h2>
+        <p>Dive deep into your progress with interactive line and bar charts for nicotine consumption. See trends over weeks and months, celebrate your improvements, and pinpoint patterns that need extra attention.</p>
+        <img src="iphone-stats.png" alt="iPhone showing Weekly & Monthly Insights charts">
+      </div>
+      <div class="feature">
+        <h2>Personalized Quit Plan</h2>
+        <p>Set realistic goals and follow a step-by-step quitting journey tailored to your needs. Whether you aim to gradually reduce or go cold turkey, PuffStop crafts a plan that fits your lifestyle and keeps you motivated daily.</p>
+        <img src="iphone-plan.png" alt="iPhone showing Personalized Quit Plan screen">
+      </div>
+    </section>
+  </main>
   <footer>
-    <div class="container">
-      <p>© 2025 PuffStop Inc. All rights reserved.</p>
-      <p>
-        <a href="#privacy">Privacy Policy</a> | 
-        <a href="#terms">Terms of Service</a> | 
-        <a href="mailto:support@puffstopapp.com">Contact Support</a>
-      </p>
-    </div>
+    <p>&copy; 2025 PuffStop. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
