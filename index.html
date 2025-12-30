@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PuffStop — Quit Smoking & Vaping with Daily Tracking & Personalized Plans</title>
+  <title>PuffStop — Quit Smoking & Vaping</title>
   <meta name="description" content="PuffStop helps you quit smoking and vaping by tracking daily puffs, offering weekly and monthly insights, and guiding you with personalized quit plans. Start your smoke-free journey today!">
   <meta property="og:title" content="PuffStop — Quit Smoking & Vaping" />
   <meta property="og:description" content="Track every puff, view nicotine trends, and follow a personalized quit plan. Download PuffStop on the App Store." />
   <meta property="og:image" content="hero-bg.jpg" />
-  <link rel="canonical" href="https://yourdomain.com" />
+  <link rel="canonical" href="https://puffstop.app" />
   <style>
     :root {
       --calm-green: #A8D5BA;
@@ -73,6 +73,47 @@
       .feature-content { flex: 1; padding-right: 1.5rem; }
       .feature img { flex: 1; max-width: 350px; }
     }
+    
+    .site-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.875rem;
+      color: #777;
+      margin-top: auto;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      gap: 1.25rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links a {
+      color: var(--dark-green);
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-copy {
+      margin: 0;
+    }
+
+    /* Optional: stack neatly on very small screens */
+    @media (max-width: 480px) {
+      .site-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+
+
   </style>
 </head>
 <body>
@@ -119,5 +160,16 @@
   <footer>
     <p>&copy; 2025 PuffStop. All rights reserved.</p>
   </footer>
+  <footer class="site-footer">
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links">
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">&copy; 2025 PuffStop. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
